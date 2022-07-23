@@ -1,0 +1,60 @@
+html {
+    color: white;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Inter, sans-serif;
+    background-color: #282D35;
+}
+
+#logo {
+    width: 40px;
+    padding-right: 10px;
+}
+
+#title {
+    color: #5dd0ee;
+    margin: 0;
+    /* auto 指的是剩下所有空間，因此得到左右物件分開的效果。*/
+    margin-right: auto;
+}
+
+#subtitle {
+    margin: 0;
+    justify-self: end;
+}
+
+.content {
+    padding: 30px;
+    padding-top: 50px;
+}
+
+.content>ul>li {
+    padding: 10px;
+}
+
+.content>ul>li::marker {
+    font-size: 2em;
+    color: #5dd0ee;
+}
+
+.content--text {
+    color: white;
+    font-weight: 10px;
+}
+
+nav {
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    /* 決定子元素超過父元素是否換行 */
+    flex-wrap: wrap;
+    /* 開始擺放的位置(水平) */
+    align-items: center;
+    background-color: rgba(105, 105, 105, 0.534);
+}
