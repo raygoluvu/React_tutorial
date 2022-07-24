@@ -23,6 +23,7 @@ function Footer() {
         <small>2022 Ray development. All rights reserved.</small>
     )
 }
+
 function CreatePage() {
     return (
         <div className="page">

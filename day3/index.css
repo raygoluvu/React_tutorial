@@ -10,6 +10,11 @@ body {
     margin: 0;
     font-family: Inter, sans-serif;
     background-color: #282D35;
+    background-image: url('./logo192.png');
+    /* background: #5dd0ee; */
+    background-repeat: no-repeat;
+    background-position: 120% 75%;
+    background-size: 250px;
 }
 
 #logo {
