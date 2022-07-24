@@ -1,0 +1,87 @@
+.header--selfie {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+h5 {
+    margin-top: 5px;
+}
+
+h6 {
+    margin: 10px;
+}
+
+.header--buts {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    transition-duration: 0.4s;
+}
+
+
+.header--email {
+    border: 2em;
+    background-color: white;
+    border-radius: 4px;
+    padding: 10px 40px;
+    margin-left: 30%;
+    border: 1px solid #297ee549
+}
+
+.header--email:hover {
+    background-color: #297fe5;
+    color: white;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.header--link {
+    border: 0;
+    color: white;
+    border-radius: 4px;
+    padding: 10px 40px;
+    background-color: #297fe5;
+    margin-right: 30%
+}
+
+.header--link:hover {
+    background-color: white;
+    color: black;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+h5 {
+    margin: 0;
+    color: coral
+}
+
+body {
+    margin: auto;
+    text-align: center;
+    background-color: #f5f5f5;
+}
+
+.section {
+    justify-content: center;
+}
+
+.section--subtitle {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+.section--content {
+    width: 50%;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 10;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 300;
+}
