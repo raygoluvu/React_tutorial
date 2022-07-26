@@ -6,8 +6,8 @@ function Header() {
             <h5 className='header--position header'>Frontend Developer</h5>
             <h6 className='header--desc header'>laurasimth.website</h6>
             <div className='header--buts'>
-                <button className='header--email header'><i class="fa fa-inbox"></i>Email</button>
-                <button className='header--link header'><i class="fa fa-external-link"></i>LinkedIn</button>
+                <button className='header--email header'><i className="fa fa-inbox"></i>Email</button>
+                <button className='header--link header'><i className="fa fa-external-link"></i>LinkedIn</button>
             </div>
         </div>
     )
@@ -26,12 +26,14 @@ function Section() {
 }
 
 function Footer() {
-    <div>
-        <img className='Footer--logo'></img>
-        <img className='Footer--logo'></img>
-        <img className='Footer--logo'></img>
-        <img className='Footer--logo'></img>
-    </div>
+    return (
+        <div className="footer">
+            <img className='icon' src="./instagram.png"></img>
+            <img className='icon' src="./instagram.png"></img>
+            <img className='icon' src="./instagram.png"></img>
+            <img className='icon' src="./instagram.png"></img>
+        </div>
+    )
 }
 
 function App() {
