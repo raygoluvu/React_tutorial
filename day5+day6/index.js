@@ -1,7 +1,7 @@
 function Navbar() {
     return (
         <nav className='navbar'>
-            <img src='./airbnb.png' className='navbar--logo'></img>
+            <img src='../images/airbnb.png' className='navbar--logo'></img>
             <h2 className='navbar--title'>airbnb</h2>
         </nav>
     )
@@ -10,7 +10,7 @@ function Navbar() {
 function Hero() {
     return (
         <section className='hero'>
-            <img className='hero--img' src='./hero.png'></img>
+            <img className='hero--img' src='../images/hero.png'></img>
             <h1 className='hero--title'>Online Experiences</h1>
             <p className='hero--content'>Joint unique interactive activeities led by one-of-a-kind hosts-all without leaving home.</p>
 
@@ -19,20 +19,21 @@ function Hero() {
 }
 
 // Reusable Componant
-function Card() {
+function Card(props) {
+    console.log(`../images/${props.img}`)
     return (
         <div className='card'>
-            <img className='card--img' src='./cat1.jpg'></img>
+            <img className='card--img' src={`../images/${props.img}`}></img>
             <br></br>
             <div className='card--status'>
-                <img className='card--star' src='./star.png'></img>
-                <span className='card--rate'>5.0</span>
-                <span className='card--country'>(6)·USA</span>
+                <img className='card--star' src='../images/star.png'></img>
+                <span className='card--rate'>{props.rate}</span>
+                <span className='card--country'>(6)·{props.country}</span>
             </div>
             <br></br>
-            <p className='card--desc'>Life lessons with Kate Zaferes</p>
+            <p className='card--desc'>{props.desc}</p>
             <br></br>
-            <p className='card--price'><span className='bold'>From $136</span> / person</p>
+            <p className='card--price'><span className='bold'>From ${props.price}</span> / person</p>
         </div>
     )
 }
@@ -49,7 +50,7 @@ function App() {
         <div>
             <Navbar />
             <Hero />
-            < Card />
+            <Card img='cat1.jpg' desc="Life lessons with Kate Zaferes" price="123" rate="5" country="USA" />
         </div>
     )
 }
