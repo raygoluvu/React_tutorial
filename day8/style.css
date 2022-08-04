@@ -1,0 +1,26 @@
+body {
+    margin: auto;
+    font-family: "Karla", sans-serif;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    background-color: #6d2387;
+    background: linear-gradient(to right, #6d2387, #a526d1);
+    color: white;
+    padding: 0.5%;
+}
+
+.header--icon {
+    height: 50px;
+    margin: 5px;
+}
+
+.header--title {
+    margin-right: auto;
+}
+
+.header--desc {
+    margin-right: 2%;
+}
