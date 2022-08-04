@@ -1,0 +1,97 @@
+body {
+    margin: auto;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    /* background-color: brown; */
+    box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.1);
+
+}
+
+.navbar--logo {
+    width: 10%;
+    height: 10%;
+}
+
+.navbar--title {
+    color: #ff9296;
+    font-weight: bold;
+}
+
+.hero {
+    margin: auto;
+    padding: 30px;
+}
+
+.hero--title {
+    font-weight: bolder;
+    margin-top: 0;
+}
+
+.hero--content {
+    width: 50%;
+}
+
+.cards-list {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    /*滾動條*/
+    overflow: auto;
+}
+
+.card {
+    width: 20%;
+    margin: 0;
+    position: relative;
+}
+
+.card--img {
+    border-radius: 5px;
+    width: 100%;
+    max-width: 200px;
+}
+
+.card--status {
+    align-items: center;
+    display: flex;
+    height: auto;
+    size: auto;
+}
+
+.card--star {
+    width: auto;
+    height: 14px;
+}
+
+.card--location {
+    padding-left: 5px;
+    color: rgb(171, 171, 171);
+}
+
+.card--price {
+    margin-top: auto;
+}
+
+.card--title,
+.card--price,
+.card--status {
+    margin: 0;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.card--badge {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    background-color: white;
+    padding: 5px 7px;
+    border-radius: 2px;
+    font-weight: bold;
+}

@@ -1,0 +1,75 @@
+body {
+    margin: auto;
+}
+
+.nav {
+    background-color: #f55a5a;
+    display: flex;
+    align-items: center;
+    /* 水平至中 */
+    justify-content: center;
+    color: white;
+    padding: 10px;
+}
+
+.nav--icon {
+    height: 50px;
+    padding-right: 15px;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    padding: 50px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.card--img {
+    height: 175px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.card--pin {
+    height: 20px;
+}
+
+.card--location {
+    display: flex;
+}
+
+.card--location>span {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.card--link {
+    color: gray;
+    text-decoration-line: underline;
+}
+
+.card--title {
+    margin: 0;
+    margin-top: 5px;
+    margin-bottom: 15px;
+
+}
+
+.card--date {
+    margin-bottom: 8px;
+}
+
+/* for the line between cards */
+
+.card--desc {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+hr {
+    background-color: lightgray;
+    border: none;
+    height: 1px;
+    width: 90%;
+    margin: auto;
+}
