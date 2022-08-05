@@ -24,3 +24,45 @@ body {
 .header--desc {
     margin-right: 2%;
 }
+
+.section {
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.section--form {
+    width: auto;
+    margin-top: 50px;
+}
+
+.form--inputBox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.form--input {
+    padding: 2%;
+    border-radius: 8px;
+    /* border-color: lightblue; */
+    justify-content: center;
+    padding-left: 14%;
+    padding-right: 14%;
+    text-align: center;
+}
+
+
+.form--submit {
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    background: linear-gradient(to right, #6d2387, #a526d1);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    /* 游標變手指 */
+    cursor: pointer;
+}
