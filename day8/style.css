@@ -29,6 +29,8 @@ body {
     width: 70%;
     margin-right: auto;
     margin-left: auto;
+    display: flex;
+    flex-direction: column;
 }
 
 .section--form {
@@ -38,7 +40,7 @@ body {
 
 .form--inputBox {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: space-between;
     margin-bottom: 20px;
 }
@@ -65,4 +67,13 @@ body {
     border-radius: 6px;
     /* 游標變手指 */
     cursor: pointer;
+}
+
+.section--memeImg {
+    align-self: center;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 2px;
+    margin-top: 30px;
 }
