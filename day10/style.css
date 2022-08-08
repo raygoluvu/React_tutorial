@@ -1,0 +1,23 @@
+body {
+    margin: auto;
+    background-color: rgb(32, 209, 32);
+    color: white;
+}
+
+.app--btn {
+    border-radius: 50px;
+    border-color: white;
+    padding: 20px;
+    margin: 30px;
+    background-color: white;
+}
+
+.app--container {
+    display: flex;
+    flex-direction: column;
+}
+
+.app--item {
+    margin: 20px;
+    font-weight: bold;
+}
