@@ -12,6 +12,7 @@ function App() {
 
         setItemsArray((preArray) => {
             // es6 method, divided preArray into pieces, add the new String, last return the new array.
+            // preArray is an object.
             console.log((preArray))
             return [...preArray, newStr]
         })
