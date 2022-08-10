@@ -1,4 +1,8 @@
 
+function Count(props) {
+
+}
+
 function Counter() {
     const [count, setCount] = React.useState(0)
     const handleClick_add = () => {
@@ -48,6 +52,7 @@ function App() {
     return (
         <div>
             < Important />
+            < Counter />
             < Counter />
         </div>
     )
