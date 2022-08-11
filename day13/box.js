@@ -25,27 +25,42 @@ const boxes = [
     },
 ]
 
+
+function Box(props) {
+    const array = props.info
+    const [mode, setMode] = React.useState(array.on)
+    const styles = {
+        backgroundColor: mode ? "black" : "lightblue"
+    }
+
+    function handleMode() {
+        setMode(preMode => !preMode)
+    }
+    return (
+        <div className="box" style={styles} onClick={handleMode}>
+        </div>
+    )
+}
+
 function App(props) {
     const [datas, setDatas] = React.useState(boxes)
     const [trigger, setTrigger] = React.useState(true)
 
-    function handleTrigger() {
-        setTrigger(preVal => !preVal)
-    }
+    // no need
+    // function handleTrigger() {
+    //     setTrigger(preVal => !preVal)
+    // }
 
 
-    const elements = datas.map((element => {
-        const styles = {
-            backgroundColor: element.on ? "black" : "lightblue"
-        }
-        return (<div className="box" style={styles} key={element.id}>
-        </div>)
-    }))
+    const elements = datas.map(element => {
+        return < Box info={{ ...element }} key={element.id} />
+    })
 
     return (
         <div >
             <h1>Boxes will go here</h1>
-            <button onClick={handleTrigger}>Change Mode</button>
+            <button>Change Mode</button>
+            <br></br>
             {elements}
         </div>
     )
