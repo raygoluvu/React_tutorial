@@ -1,0 +1,17 @@
+body {
+    margin: auto;
+}
+
+.box {
+    /* background-color: lightblue; */
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+    padding: 5px;
+    text-align: center;
+    /* justify-content: center; */
+    /* inline-block 相較inline保留寬度高度的設置權，相較block在其後不佳換行符號 */
+    display: inline-block;
+    border: 1px solid;
+    border-radius: 5px;
+}
