@@ -27,6 +27,7 @@ const boxes = [
 
 
 function Box(props) {
+    // Use Local State
     const array = props.info
     const [mode, setMode] = React.useState(array.on)
     const styles = {
