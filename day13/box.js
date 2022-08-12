@@ -46,31 +46,12 @@ function App(props) {
 
     function toggle(id) {
         setDatas(preDatas => {
-            // Setup a new array for the return values.
-            const newDatas = []
-
-            // Using for loop to iterate every element in the preArray to find the correspond ID.
-            for (let i = 0; i < preDatas.length; i++) {
-                const currentData = preDatas[i]
-                // If id is the same update new value.
-                if (currentData.id === id) {
-                    console.log("before:", currentData.on)
-                    const updateData = {
-                        ...currentData,
-                        on: !currentData.on
-                    }
-                    // Push new data into array.
-                    newDatas.push(updateData)
-                    console.log("after", updateData.on)
-                }
-                // Not the correspond id, push old data into array.
-                else {
-                    newDatas.push(currentData)
-                }
-            }
-            return newDatas
+            return preDatas.map((data) => {
+                return data.id === id ? { ...data, on: !data.on } : data
+            })
         })
     }
+
 
     const elements = datas.map(element => {
         return < Box
