@@ -29,32 +29,56 @@ const boxes = [
 function Box(props) {
     // Use Local State
     const array = props.info
-    const [mode, setMode] = React.useState(array.on)
     const styles = {
-        backgroundColor: mode ? "black" : "lightblue"
+        backgroundColor: array.on ? "black" : "lightblue"
     }
 
-    function handleMode() {
-        setMode(preMode => !preMode)
-    }
     return (
-        <div className="box" style={styles} onClick={handleMode}>
-        </div>
+        <div className="box" style={styles} onClick={() => props.toggle(props.id)} >
+        </ div>
     )
 }
 
 function App(props) {
     const [datas, setDatas] = React.useState(boxes)
-    const [trigger, setTrigger] = React.useState(true)
+    // For change bgColor using a button.
+    // const [trigger, setTrigger] = React.useState(true)
 
-    // no need
-    // function handleTrigger() {
-    //     setTrigger(preVal => !preVal)
-    // }
+    function toggle(id) {
+        setDatas(preDatas => {
+            // Setup a new array for the return values.
+            const newDatas = []
 
+            // Using for loop to iterate every element in the preArray to find the correspond ID.
+            for (let i = 0; i < preDatas.length; i++) {
+                const currentData = preDatas[i]
+                // If id is the same update new value.
+                if (currentData.id === id) {
+                    console.log("before:", currentData.on)
+                    const updateData = {
+                        ...currentData,
+                        on: !currentData.on
+                    }
+                    // Push new data into array.
+                    newDatas.push(updateData)
+                    console.log("after", updateData.on)
+                }
+                // Not the correspond id, push old data into array.
+                else {
+                    newDatas.push(currentData)
+                }
+            }
+            return newDatas
+        })
+    }
 
     const elements = datas.map(element => {
-        return < Box info={{ ...element }} key={element.id} />
+        return < Box
+            info={{ ...element }}
+            toggle={toggle}
+            id={element.id}
+            key={element.id}
+        />
     })
 
     return (
