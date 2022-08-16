@@ -1,0 +1,23 @@
+/* 最常使用的置中方法 */
+#d1 {
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+#head1 {
+    margin: auto;
+}
+
+/* flex 也可以使元素居中 */
+#d2 {
+    display: flex;
+    flex-direction: column;
+    /* 子元素置中 */
+    /* align-items: center; */
+}
+
+/* flexbox 下的特定元素置中 */
+#d2--h1 {
+    align-self: center;
+}
