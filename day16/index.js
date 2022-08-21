@@ -817,23 +817,18 @@ function Header() {
 }
 
 function Section() {
+    const [allMemes, setallMemes] = React.useState({})
 
-
-    const [allMemeImages, setallMemeImages] = React.useState({})
-
-    React.useEffect(
-        () => {
-            setallMemeImages(fetch("https://api.imgflip.com/get_memes")
-                .then((response) => {
-                    console.log(response)
-                    return response.json()
-                })
-                .then((result) => {
-                    console.log(result.data)
-                    setallMemeImages(result.data)
-                    return result.data
-                }))
-        }, [])
+    React.useEffect(() => {
+        async function getMemes() {
+            const response = await fetch("https://api.imgflip.com/get_memes")
+            const result = await response.json()
+            console.log(result)
+            setallMemes(result.data.memes)
+        }
+        getMemes()
+    }
+        , [])
 
     const [meme, setMeme] = React.useState(
         {
@@ -845,9 +840,8 @@ function Section() {
 
 
     function getMemeImage() {
-        const memesArray = allMemeImages.memes
-        const randomNum = Math.floor(Math.random() * memesArray.length)
-        const url = memesArray[randomNum].url
+        const randomNum = Math.floor(Math.random() * allMemes.length)
+        const url = allMemes[randomNum].url
 
         setMeme(
             preMeme => (
